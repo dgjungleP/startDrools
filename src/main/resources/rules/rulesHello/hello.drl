@@ -1,0 +1,28 @@
+package rules.rulesHello
+import  entity.Person;
+    rule  "test001"
+        when
+            eval(true);
+            then
+             System.out.println("Hello World");
+     end
+ rule "test002"
+     when
+     $p:Person();
+     then
+        System.out.println("This entity " +$p);
+      end
+rule "test003"
+     when
+     $p:Person(name=="张三",age==30);
+     then
+     $p.setAge("40");
+     update($p)
+        System.out.println("This entity is right");
+      end
+  rule "test004"
+     when
+     $p:Person(name=="张三",age==40);
+     then
+        System.out.println("This entity is right");
+     end
