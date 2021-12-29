@@ -1,0 +1,38 @@
+package rules.contraint.isContains
+
+import  entity.Person
+import entity.School
+
+rule "containsTest"
+when
+ $s:School()
+ $p:Person(className contains $s.className)
+ then
+  System.out.println("Bingo nice contains!!");
+  end
+
+  rule "containsTest002"
+when
+ $s:School()
+ $p:Person(className contains "no1")
+ then
+  System.out.println("Bingo nice contains!! the rule2 is run");
+  end
+
+rule "containsTest003"
+when
+ $s:School()
+ $p:Person(className  contains $s.className)
+ then
+ $s.setClassName("no2");
+ update($s);
+end
+
+rule "containsTest004"
+when
+ $s:School()
+ $p:Person(className not contains $s.className)
+ then
+  System.out.println("Bingo nice not  contains!! the rule4 is run");
+  end
+

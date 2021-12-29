@@ -1,0 +1,12 @@
+package rules.contraint.memberof
+
+import  entity.Person
+import entity.School
+
+rule "memberOdTest001"
+when
+$s:School();
+$p:Person(className memberOf $s.className)
+then
+ System.out.println("Nice memberOf");
+ end

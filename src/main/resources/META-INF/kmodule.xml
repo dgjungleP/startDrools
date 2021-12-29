@@ -3,4 +3,10 @@
     <kbase name="rules" packages="rules.rulesHello">
         <ksession name="testhelloworld"/>
     </kbase>
+    <kbase name="contains" packages="rules.constraint.isContains">
+        <ksession name="containTest"/>
+    </kbase>
+    <kbase name="memberOf" packages="rules.constraint.memberof">
+        <ksession name="memberOfTest"/>
+    </kbase>
 </kmodule>
