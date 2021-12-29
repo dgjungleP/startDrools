@@ -6,7 +6,23 @@ import entity.School
 rule "memberOdTest001"
 when
 $s:School();
-$p:Person(className memberOf $s.className)
+$p:Person(className memberOf $s.classNameArray)
 then
  System.out.println("Nice memberOf");
+ end
+
+rule "memberOdTest002"
+when
+$s:School();
+$p:Person(className memberOf "no1")
+then
+ System.out.println("Nice memberOf!! The rule002 is run");
+ end
+
+rule "memberOdTest003"
+when
+$s:School();
+$p:Person(className memberOf $s.className)
+then
+ System.out.println("Nice memberOf !! The rule003 is run");
  end

@@ -18,6 +18,7 @@ public class RulesMemberOf {
         person.setName("张三");
         person.setClassName("no1");
         school.setClassNameArray(new String[]{"no1", "no2", "no3", "no4"});
+        school.setClassName("no1");
         session.insert(person);
         session.insert(school);
         int count = session.fireAllRules();
