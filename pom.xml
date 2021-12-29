@@ -12,6 +12,7 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <drools.versions>7.10.0.Final</drools.versions>
+        <log4j.version>2.17.1</log4j.version>
     </properties>
 
 
@@ -20,6 +21,21 @@
         <groupId>org.drools</groupId>
         <artifactId>drools-compiler</artifactId>
         <version>${drools.versions}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-api</artifactId>
+        <version>${log4j.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-core</artifactId>
+        <version>${log4j.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-slf4j-impl</artifactId>
+        <version>${log4j.version}</version>
     </dependency>
 </dependencies>
 </project>

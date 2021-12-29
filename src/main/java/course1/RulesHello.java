@@ -1,3 +1,5 @@
+package course1;
+
 import entity.Person;
 import org.kie.api.KieServices;
 import org.kie.api.runtime.KieContainer;
@@ -11,11 +13,7 @@ public class RulesHello {
         KieSession session = container.newKieSession("testhelloworld");
         Person person = new Person();
         session.insert(person);
-        person.setAge("30");
-        person.setName("张三");
         int count = session.fireAllRules();
-        System.out.println("Count: " + count);
-        System.out.println(person);
         session.dispose();
     }
 
